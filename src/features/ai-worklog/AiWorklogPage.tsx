@@ -199,8 +199,8 @@ function CheckpointCard({
                   {checkpoint.outcome}
                 </DetailBlock>
 
-                <div className="flex flex-wrap gap-4 pt-1">
-                  <div className="min-w-0 flex-1">
+                <div className="space-y-4 border-t border-border/40 pt-4">
+                  <div>
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                       Затронутые файлы
                     </p>
@@ -210,18 +210,18 @@ function CheckpointCard({
                           key={file}
                           className="inline-flex items-center gap-1 rounded-md border border-border/60 bg-muted/30 px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
                         >
-                          <FileTextIcon className="h-3 w-3" />
+                          <FileTextIcon className="h-3 w-3 shrink-0" />
                           {file}
                         </span>
                       ))}
                     </div>
                   </div>
                   {checkpoint.metrics ? (
-                    <div className="shrink-0">
+                    <div>
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                         Метрики
                       </p>
-                      <p className="mt-1.5 text-sm font-medium tabular-nums">
+                      <p className="mt-1.5 text-sm font-medium leading-relaxed text-foreground/80">
                         {checkpoint.metrics}
                       </p>
                     </div>
